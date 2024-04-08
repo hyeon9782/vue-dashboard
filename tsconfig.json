@@ -28,8 +28,8 @@
       "@assets/*": ["src/assets/*"],
       "@apis/*": ["src/apis/*"],
       "@components/*": ["src/components/*"],
-      "@store/*": ["src/store/*"],
-      "@router/*": ["src/router/*"],
+      "@stores/*": ["src/stores/*"],
+      "@routes/*": ["src/routes/*"],
       "@types/*": ["src/types/*"],
       "@constants/*": ["src/constants/*"]
     }
