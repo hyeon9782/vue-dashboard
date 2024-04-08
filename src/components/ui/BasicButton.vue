@@ -5,7 +5,11 @@
 </template>
 <script lang="ts" setup>
 import { toRefs } from "vue";
-const props = defineProps({});
+interface Button {
+  color?: String;
+}
+
+const props = defineProps<{ data: Button }>();
 
 const { color } = toRefs(props);
 </script>
