@@ -1,7 +1,12 @@
 <template>
-  <main class="page">Home</main>
+  <main class="page">
+    Home
+    <LineChart />
+  </main>
 </template>
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import LineChart from "@/components/chart/LineChart.vue";
+</script>
 <style lang="scss" scoped>
 .page {
   display: flex;
