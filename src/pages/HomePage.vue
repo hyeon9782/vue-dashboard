@@ -2,11 +2,13 @@
   <main class="page">
     <LineChart :chart="chart" :xAxis="xAxis" :yAxis="yAxis" :series="series" />
     <BarChart :chart="chart" :xAxis="xAxis" :yAxis="yAxis" :series="series" />
+    <PieChart :chart="chart" :xAxis="xAxis" :yAxis="yAxis" :series="series" />
   </main>
 </template>
 <script lang="ts" setup>
 import LineChart from "@/components/chart/LineChart.vue";
 import BarChart from "@/components/chart/BarChart.vue";
+import PieChart from "@/components/chart/PieChart.vue";
 import { ref } from "vue";
 
 const chart = ref({});
