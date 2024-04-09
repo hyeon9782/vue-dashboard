@@ -1,10 +1,12 @@
 <template>
   <main class="page">
     <LineChart :chart="chart" :xAxis="xAxis" :yAxis="yAxis" :series="series" />
+    <BarChart :chart="chart" :xAxis="xAxis" :yAxis="yAxis" :series="series" />
   </main>
 </template>
 <script lang="ts" setup>
 import LineChart from "@/components/chart/LineChart.vue";
+import BarChart from "@/components/chart/BarChart.vue";
 import { ref } from "vue";
 
 const chart = ref({});
