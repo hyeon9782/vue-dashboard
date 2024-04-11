@@ -14,15 +14,11 @@ import Summary from "../tabs/Summary.vue";
 import Identification from "../tabs/Identification.vue";
 import Quantification from "../tabs/Quantification.vue";
 import SubHeader from "@/components/layout/SubHeader.vue";
+import { SearchedTab } from "@/types/tabs";
 
 const currentTab = ref("Summary");
 
-type TabComponent =
-  | typeof Summary
-  | typeof Identification
-  | typeof Quantification;
-
-const tabs: Record<string, TabComponent> = {
+const tabs: Record<string, SearchedTab> = {
   Summary,
   Identification,
   Quantification,

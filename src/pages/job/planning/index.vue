@@ -13,11 +13,10 @@ import { ref } from "vue";
 import JobPlanning from "../tabs/JobPlanning.vue";
 import ParameterFileEditing from "../tabs/ParameterFileEditing.vue";
 import SubHeader from "@/components/layout/SubHeader.vue";
+import { JobTab } from "@/types/tabs";
 const currentTab = ref("JobPlanning");
 
-type TabComponent = typeof JobPlanning | typeof ParameterFileEditing;
-
-const tabs: Record<string, TabComponent> = {
+const tabs: Record<string, JobTab> = {
   JobPlanning,
   ParameterFileEditing,
 };

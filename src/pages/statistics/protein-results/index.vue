@@ -15,15 +15,11 @@ import Processing from "@pages/statistics/tabs/Processing.vue";
 import Normalization from "@pages/statistics/tabs/Normalization.vue";
 import DifferentialTest from "@pages/statistics/tabs/DifferentialTest.vue";
 import SubHeader from "@/components/layout/SubHeader.vue";
+import { StatisticsTab } from "@/types/tabs";
 
 const currentTab = ref("Processing");
 
-type TabComponent =
-  | typeof Processing
-  | typeof Normalization
-  | typeof DifferentialTest;
-
-const tabs: Record<string, TabComponent> = {
+const tabs: Record<string, StatisticsTab> = {
   Processing,
   Normalization,
   DifferentialTest,
