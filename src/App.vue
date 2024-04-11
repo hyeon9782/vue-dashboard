@@ -1,14 +1,17 @@
 <script setup lang="ts">
-import Header from "@components/layout/Header.vue";
+import MainHeader from "@components/layout/MainHeader.vue";
 import Sidebar from "./components/layout/Sidebar.vue";
 </script>
 
 <template>
-  <Header />
-  <main class="container">
+  <div class="box">
     <Sidebar />
-    <RouterView />
-  </main>
+
+    <main class="container">
+      <MainHeader />
+      <RouterView />
+    </main>
+  </div>
 </template>
 
 <style>
@@ -17,7 +20,10 @@ body {
   font-family: "MBC1961GulimM";
 }
 
-.container {
+.box {
   display: flex;
+}
+
+.container {
 }
 </style>

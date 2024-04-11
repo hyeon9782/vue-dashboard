@@ -1,7 +1,30 @@
 <template>
   <Transition name="fade">
-    <section class="sidebar" v-show="isShow">
+    <section v-if="!isShow">
+      <button @click="store.openSidebar">⭕</button>
+      <nav>
+        <ul>
+          <li>
+            <RouterLink to="/">Home</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/job/job-status">Job</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/searched/protein-results">Searched</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/statistics/protein-results">Statistics</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/network/protein-results">Network</RouterLink>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <section class="sidebar" v-else>
       <button @click="store.closeSidebar">❌</button>
+
       <nav>
         <ul>
           <li>
