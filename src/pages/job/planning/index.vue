@@ -1,8 +1,10 @@
 <template>
   <div>
-    <button v-for="(_, tab) in tabs" :key="tab" @click="currentTab = tab">
-      {{ tab }}
-    </button>
+    <SubHeader
+      :tabs="tabs"
+      @tab-change="currentTab = $event"
+      :current-tab="currentTab"
+    />
     <component :is="tabs[currentTab]"></component>
   </div>
 </template>
@@ -10,9 +12,12 @@
 import { ref } from "vue";
 import JobPlanning from "../tabs/JobPlanning.vue";
 import ParameterFileEditing from "../tabs/ParameterFileEditing.vue";
+import SubHeader from "@/components/layout/SubHeader.vue";
 const currentTab = ref("JobPlanning");
 
-const tabs = {
+type TabComponent = typeof JobPlanning | typeof ParameterFileEditing;
+
+const tabs: Record<string, TabComponent> = {
   JobPlanning,
   ParameterFileEditing,
 };
