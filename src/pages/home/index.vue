@@ -1,8 +1,8 @@
 <template>
   <main class="page">
-    <LineChart :chart="chart" :xAxis="xAxis" :yAxis="yAxis" :series="series" />
-    <BarChart :chart="chart" :xAxis="xAxis" :yAxis="yAxis" :series="series" />
-    <PieChart :chart="chart" :xAxis="xAxis" :yAxis="yAxis" :series="series" />
+    <LineChart :xAxis="xAxis" :yAxis="yAxis" :series="series" />
+    <BarChart :xAxis="xAxis" :yAxis="yAxis" :series="series" />
+    <PieChart :xAxis="xAxis" :yAxis="yAxis" :series="series" />
   </main>
 </template>
 <script lang="ts" setup>
@@ -11,7 +11,6 @@ import BarChart from "@/components/chart/BarChart.vue";
 import PieChart from "@/components/chart/PieChart.vue";
 import { ref } from "vue";
 
-const chart = ref({});
 const xAxis = ref({});
 const yAxis = ref({});
 const series = ref([

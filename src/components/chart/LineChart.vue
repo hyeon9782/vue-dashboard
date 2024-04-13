@@ -1,11 +1,8 @@
 <template>
-  <div>
-    <div id="chart"></div>
-  </div>
+  <highcharts :options="chartOptions"></highcharts>
 </template>
 <script lang="ts" setup>
-import { ref, onMounted, toRefs } from "vue";
-import Highcharts from "highcharts";
+import { ref, toRefs } from "vue";
 
 const props = defineProps({
   series: [],
@@ -25,10 +22,6 @@ const chartOptions = ref({
   xAxis,
   yAxis,
   series,
-});
-
-onMounted(() => {
-  Highcharts.chart("chart", chartOptions.value);
 });
 </script>
 <style lang=""></style>
