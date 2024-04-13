@@ -3,6 +3,10 @@
 </template>
 <script lang="ts" setup>
 import { ref, toRefs } from "vue";
+import Highcharts from "highcharts";
+import exportingInit from "highcharts/modules/exporting";
+
+exportingInit(Highcharts);
 
 const props = defineProps({
   series: [],
