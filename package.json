@@ -13,8 +13,10 @@
     "highcharts": "^11.4.1",
     "highcharts-vue": "^2.0.1",
     "pinia": "^2.1.7",
+    "vee-validate": "^4.12.6",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^20.12.5",
